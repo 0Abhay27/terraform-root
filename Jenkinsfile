@@ -41,7 +41,7 @@ pipeline {
             steps {
                 sh """
                     mkdir -p terraform.tfstate.d/${params.ENVIRONMENT}
-                   chmod -R 777 terraform.tfstate.d/
+                   chmod -R 755 terraform.tfstate.d/
                     echo "✅ State directory permissions fixed"
                 """
             }
